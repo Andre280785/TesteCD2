@@ -1,6 +1,6 @@
 Ambiente:
 
-1 - Verção do PHP usada no teste 7.2.33;
+1 - Versão do PHP usada no teste 7.2.33;
 
 2 - Módulo PDO ativado, para conexão com o banco de dados;
 
