@@ -6,9 +6,10 @@
 
     $form.addEventListener('submit', function(e){        
 
-        $exp = /\d{5}\d{3}/;
-
-        if(!$exp.test($cep.value)){
+        
+        $exp2 = /^([\d]{2})\.*([\d]{3})-*([\d]{3})/;
+        console.log($exp2.test($cep.value));
+        if(!$exp2.test($cep.value)){
             $alertErro.style.display = 'block';
             e.preventDefault();
             
