@@ -38,13 +38,13 @@ class Cep{
             }
         }catch(Exception $e){
             if($e->getCode()==1049){
-                echo "Não foi possivel acessar o Banco de dados, entre em com o administrador!";
+                $this->alertErro("Não foi possivel acessar o Banco de dados, entre em com o administrador!");
             }else if($e->getCode()==1045){
-                echo "Acesso ao Banco de dados negado!";
+                $this->alertErro("Acesso ao Banco de dados negado!");
             }else if($e->getCode()==2054){
-                echo "Acesso ao Banco de dados negado!";
+                $this->alertErro("Acesso ao Banco de dados negado!");
             }else{
-                echo "Erro desconhecido, contate o administrador do sistema";
+                $this->alertErro("Erro desconhecido, contate o administrador do sistema");
             }
         }
         
