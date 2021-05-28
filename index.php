@@ -12,7 +12,7 @@
         <title>Endereço</title>        
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">André T. Machado</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </header>
         <div class="alert alert-danger fixed-top mt-5" id="erroCep" style="display: none;" role="alert">
             Informe o CEP nos formatos 03380800 ou no formato 03380-800!
         </div>        
@@ -64,7 +64,7 @@
             </section>
         </div>        
         <footer class="rodape navbar-dark bg-dark"> 
-            <p>Copyright &copy; www.cd2.com.br/</p>
+            <p>Copyright &copy; www.cd2.com.br</p>
         </footer>
 
         <!-- JavaScript (Opcional) -->
