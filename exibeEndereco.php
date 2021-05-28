@@ -26,7 +26,7 @@
                 </div>
             </div>
         </nav>
-        
+                
         <section class="section py-5">
             <div>
                 <?php
@@ -34,38 +34,12 @@
                     $retorno = !isset($_POST['cep']) ? 0 : $_POST['cep']; 
                     $cep = new Cep();
                     $cep->cunsultaCep($retorno);
-                } catch(Exception $e){
-                                       
-                    if($e->getCode()==1049){
-                        $mensagem = "Não foi possivel acessar o Banco de dados, entre em com o administrador!";
-                        echo "
+                } catch(Exception $e){               
+                    echo "
                         <div class='alert alert-danger fixed-top mt-5' id='cepNull' style='display: none;' role='alert'>
-                            ". $mensagem ."
+                            ". $mensagem . "Codigo: ".$e->getCode()."
                         </div>
-                    ";
-                    } else if($e->getCode()==1045){
-                        $mensagem = "Acesso ao Banco de dados negado!";
-                        echo "
-                        <div class='alert alert-danger fixed-top mt-5' id='cepNull' style='display: none;' role='alert'>
-                            ". $mensagem ."
-                        </div>
-                    ";
-                    }else if($e->getCode()==2054){
-                        $mensagem = "Acesso ao Banco de dados negado!";
-                        echo "
-                        <div class='alert alert-danger fixed-top mt-5' id='cepNull' style='display: none;' role='alert'>
-                            ". $mensagem ."
-                        </div>
-                        ";
-                    }else{
-                        $mensagem = "Erro desconhecido, contate o administrador do sistema";
-                        echo "
-                        <div class='alert alert-danger fixed-top mt-5' id='cepNull' style='display: none;' role='alert'>
-                            ". $mensagem ."
-                        </div>
-                        ";
-                    }
-                    
+                    ";                                       
                 } 
                                                                                     
                 ?>                
